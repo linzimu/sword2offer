@@ -12,10 +12,10 @@ class Solution:
         # write code here
         if not root:
             return None
-        if (root.left is None) and (root.right is None):
+        # 递归遍历根节点的左右子节点
+        if root.left is None and root.right is None:
             return root
         root.left, root.right = root.right, root.left
-        # 递归遍历根节点的左右子节点
         if root.left is not None:
             self.Mirror(root.left)
         if root.right is not None:
